@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Power of Cars</title>
+  
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+ <div class="login">
+	<h1 style="color:rgb(46, 29, 235);">Car Model using Linear Regression</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="mpg" placeholder="MPG" required="required" />
+      <input type="text" name=cylinders" placeholder="Cylinders" required="required" />
+      <input type="text" name="horsepower" placeholder="Horsepower" required="required" />
+      <input type="text" name="weight" placeholder="Weight" required="required" />
+      <input type="text" name="acceleration" placeholder="Acceleration" required="required" />
+      <input type="text" name="model" placeholder="Model" required="required" />
+      
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:rgb(0, 0, 0);">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
+
+
+
+
